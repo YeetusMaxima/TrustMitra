@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -16,3 +17,7 @@ Note: This will impact Vite dev & build performances.
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+=======
+# Trust-Mitra
+rustMitra is envisioned as a Peer Verification Network intended to build trust for daily transactions, such as hiring contractors, domestic workers, tutors, and small businesses.it has feature like a dispute resolution process that allows for evidence submission, an escrow payment system for managing larger transactions.
+>>>>>>> 86c6d3f7b68b4805810fd7861c87ccbad33d695d
