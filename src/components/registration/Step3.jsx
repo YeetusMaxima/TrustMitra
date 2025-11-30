@@ -22,6 +22,7 @@ export default function Step3({ data, onChange, onNext, onBack }) {
   return (
     <div className="rounded-2xl border-2 border-gray-300 p-8 bg-white">
       <div className="space-y-6">
+
         {/* PAN Number */}
         <div>
           <label className="mb-2 block font-medium text-gray-700">PAN Number</label>
@@ -42,22 +43,23 @@ export default function Step3({ data, onChange, onNext, onBack }) {
         {/* ID Documents */}
         <div>
           <label className="mb-3 block font-medium text-gray-700">Choose ID Documents</label>
-          <label className="cursor-pointer rounded-lg border-2 border-dashed border-gray-300 p-8 text-center transition hover:bg-gray-50">
+          <label className="cursor-pointer rounded-lg bg-gray-100 border border-gray-200 p-6 flex flex-col items-center justify-center gap-2 text-center transition hover:bg-gray-200">
             <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
+            
             {documentPreview ? (
-              <div className="space-y-2">
+              <>
                 <img
                   src={documentPreview || "/placeholder.svg"}
                   alt="Document preview"
-                  className="mx-auto h-20 w-20 rounded object-cover"
+                  className="h-20 w-20 rounded object-cover"
                 />
                 <p className="text-sm text-gray-600">{data.idDocument?.name}</p>
-              </div>
+              </>
             ) : (
-              <div className="space-y-2">
-                <ImageIcon className="mx-auto h-10 w-10 text-gray-400" />
+              <>
+                <ImageIcon className="h-10 w-10 text-gray-400" />
                 <p className="text-gray-600">Choose Image</p>
-              </div>
+              </>
             )}
           </label>
           <p className="mt-2 text-xs text-gray-500">*Upload Citizenship, Licence, or any government id (max 5 mb)</p>
@@ -79,6 +81,7 @@ export default function Step3({ data, onChange, onNext, onBack }) {
             Next
           </button>
         </div>
+
       </div>
     </div>
   )

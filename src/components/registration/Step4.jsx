@@ -26,7 +26,7 @@ export default function Step4({ data, onChange, onSubmit, onBack }) {
         {/* Upload Selfie */}
         <div>
           <label className="mb-3 block font-medium text-gray-700">Upload Selfie</label>
-          <label className="cursor-pointer rounded-lg border-2 border-dashed border-gray-300 p-8 text-center transition hover:bg-gray-50">
+          <label className="cursor-pointer rounded-lg bg-gray-100 border border-gray-300 p-6 flex flex-col items-center justify-center gap-2 text-center transition hover:bg-gray-200">
             <input type="file" accept="image/*" onChange={handleSelfieChange} className="hidden" />
             {selfiePreview ? (
               <div className="space-y-2">
