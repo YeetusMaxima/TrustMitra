@@ -1,13 +1,12 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Home({ onGetStarted }) {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar - Light Theme */}
-
       {/* Hero Section Container */}
       <div className="relative">
-        {/* Image Container - 90% width */}
         <div className="mx-auto w-[90%] overflow-hidden rounded-b-2xl shadow-2xl mt-8">
           <div className="relative h-[600px]">
             <img
@@ -15,31 +14,21 @@ export default function Home({ onGetStarted }) {
               alt="Skilled workers collaborating"
               className="h-full w-full object-cover"
             />
-            {/* Gradient overlay concentrated at bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-            {/* Additional bottom shadow for depth */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
         </div>
 
-        {/* Text Overlay - Positioned at bottom */}
+        {/* Text Overlay */}
         <div className="absolute inset-x-0 bottom-0">
           <div className="mx-auto w-[90%] text-center">
             <section className="relative pb-16 pt-8 text-white md:pb-20 md:pt-12">
               <div className="mx-auto max-w-8xl px-4">
-                <h1
-                  className="mb-4 text-4xl font-bold text-balance md:text-5xl lg:text-6xl xl:text-7xl
-                  [text-shadow:0_4px_12px_rgba(0,0,0,0.8)]
-                  drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
-                >
+                <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl [text-shadow:0_4px_12px_rgba(0,0,0,0.8)] drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]">
                   Find Skilled Workers Near You
                 </h1>
 
-                <p
-                  className="mb-8 mx-auto text-lg leading-relaxed text-gray-100 text-balance md:text-xl lg:text-2xl w-[100%]
-                  [text-shadow:0_2px_rgba(0,0,0,0.1)]
-                  drop-shadow-md"
-                >
+                <p className="mb-8 mx-auto text-lg leading-relaxed text-gray-100 md:text-xl lg:text-2xl [text-shadow:0_2px_rgba(0,0,0,0.1)] drop-shadow-md w-[100%]">
                   Our platform connects job seekers and employers across all
                   industries, all skill levels, and every type of work. Whether
                   you're looking for your next career move or searching for the
@@ -49,11 +38,7 @@ export default function Home({ onGetStarted }) {
 
                 <button
                   onClick={onGetStarted}
-                  className="rounded-xl bg-red-600 px-10 py-5 text-lg font-semibold text-white 
-                    transition-all duration-300 hover:bg-red-700 
-                    shadow-2xl hover:shadow-3xl
-                    [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]
-                    hover:scale-105"
+                  className="rounded-xl bg-red-600 px-10 py-5 text-lg font-semibold text-white transition-all duration-300 hover:bg-red-700 shadow-2xl hover:shadow-3xl hover:scale-105"
                 >
                   Get Started
                 </button>
@@ -62,212 +47,198 @@ export default function Home({ onGetStarted }) {
           </div>
         </div>
       </div>
+
+      {/* Hire Now Section */}
       <div className="relative mt-22 w-[90%] mx-auto">
         <h2 className="text-red-600 text-4xl font-bold mb-15">Hire Now</h2>
 
         <div className="grid grid-cols-7 gap-4">
           {/* CARD 1 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/plumber.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            {/* BOTTOM SHADOW */}
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Plumber
-            </h3>
-          </div>
+          <Link href="/category/plumber">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/plumber.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Plumber
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 2 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/electrician.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Electrician
-            </h3>
-          </div>
+          <Link href="/category/electrician">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/electrician.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Electrician
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 3 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="Home/driver.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Driver
-            </h3>
-          </div>
+          <Link href="/category/driver">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="Home/driver.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Driver
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 4 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/gardener.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Gardener
-            </h3>
-          </div>
+          <Link href="/category/gardener">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/gardener.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Gardener
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 5 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/carpenter.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Carpenter
-            </h3>
-          </div>
+          <Link href="/category/carpenter">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/carpenter.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Carpenter
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 6 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/cook.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              Cook
-            </h3>
-          </div>
+          <Link href="/category/cook">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/cook.png"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                Cook
+              </h3>
+            </div>
+          </Link>
 
           {/* CARD 7 */}
-          <div className="relative w-full h-40 rounded-xl overflow-hidden">
-            <img
-              src="/Home/more.png"
-              alt="Worker"
-              className="w-full h-full object-cover"
-            />
-
-            {/* BIG ARROW */}
-            <span className="absolute inset-0 flex items-center justify-center text-white text-8xl drop-shadow-xl">
-              →
-            </span>
-
-            {/* BOTTOM SHADOW */}
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
-
-            <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
-              More
-            </h3>
-          </div>
+          <Link href="/category/more">
+            <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
+              <img
+                src="/Home/more.png"
+                className="w-full h-full object-cover"
+              />
+              <span className="absolute inset-0 flex items-center justify-center text-white text-8xl drop-shadow-xl">
+                →
+              </span>
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/90 to-transparent"></div>
+              <h3 className="absolute text-[20px] bottom-2 left-1/2 -translate-x-1/2 text-white drop-shadow-md">
+                More
+              </h3>
+            </div>
+          </Link>
         </div>
       </div>
 
+      {/* Top Employees Section */}
       <div className="relative mt-20 w-[90%] mx-auto mb-20">
         <h2 className="text-red-600 text-4xl font-bold mb-15">Top Employees</h2>
 
         {/* Employee Card 1 */}
-        <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between">
-          {/* LEFT — Photo */}
-          <div className="flex items-start gap-4">
-            <img
-              src="/Home/person1.png"
-              className="w-40 h-40 rounded-xl object-cover"
-              alt="Employee"
-            />
+        <Link href="/employee/john-doe">
+          <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
+            <div className="flex items-start gap-4">
+              <img
+                src="/Home/person1.png"
+                className="w-40 h-40 rounded-xl object-cover"
+              />
 
-            <div>
-              <h3 className="text-3xl font-bold">John Doe</h3>
-              <p className="text-gray-600 text-2xl mt-5">Plumber</p>
+              <div>
+                <h3 className="text-3xl font-bold">John Doe</h3>
+                <p className="text-gray-600 text-2xl mt-5">Plumber</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div className="text-yellow-500 text-4xl">★★★★☆</div>
+              <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
+                Hire
+              </button>
             </div>
           </div>
-
-          {/* RIGHT — Rating + Hire Button */}
-          <div className="flex flex-col gap-5">
-            <div className="text-yellow-500 text-4xl">★★★★☆</div>
-            <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
-              Hire
-            </button>
-          </div>
-        </div>
+        </Link>
 
         {/* Employee Card 2 */}
-        <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between">
-          <div className="flex items-start gap-4">
-            <img
-              src="/Home/person2.png"
-              className="w-40 h-40 rounded-xl object-cover"
-              alt="Employee"
-            />
+        <Link href="/employee/jane-smith">
+          <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
+            <div className="flex items-start gap-4">
+              <img
+                src="/Home/person2.png"
+                className="w-40 h-40 rounded-xl object-cover"
+              />
 
-            <div>
-              <h3 className="text-3xl font-bold">Jane Smith</h3>
-              <p className="text-gray-600 text-2xl mt-5">Electrician</p>
+              <div>
+                <h3 className="text-3xl font-bold">Jane Smith</h3>
+                <p className="text-gray-600 text-2xl mt-5">Electrician</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div className="text-yellow-500 text-4xl">★★★★★</div>
+              <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
+                Hire
+              </button>
             </div>
           </div>
-
-          <div className="flex flex-col gap-5">
-            <div className="text-yellow-500 text-4xl">★★★★★</div>
-            <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
-              Hire
-            </button>
-          </div>
-        </div>
+        </Link>
 
         {/* Employee Card 3 */}
-        <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between">
-          <div className="flex items-start gap-4">
-            <img
-              src="/Home/person3.png"
-              className="w-40 h-40 rounded-xl object-cover"
-              alt="Employee"
-            />
+        <Link href="/employee/michael-lee">
+          <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
+            <div className="flex items-start gap-4">
+              <img
+                src="/Home/person3.png"
+                className="w-40 h-40 rounded-xl object-cover"
+              />
 
-            <div>
-              <h3 className="text-3xl font-bold">Michael Lee</h3>
-              <p className="text-gray-600 text-2xl mt-5">Carpenter</p>
+              <div>
+                <h3 className="text-3xl font-bold">Michael Lee</h3>
+                <p className="text-gray-600 text-2xl mt-5">Carpenter</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div className="text-yellow-500 text-4xl">★★★★☆</div>
+              <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
+                Hire
+              </button>
             </div>
           </div>
-
-          <div className="flex flex-col gap-5">
-            <div className="text-yellow-500 text-4xl">★★★★☆</div>
-            <button className="bg-red-600 text-white text-3xl font-semibold px-12 py-2 rounded-lg">
-              Hire
-            </button>
-          </div>
-        </div>
+        </Link>
       </div>
 
+      {/* Stats Section */}
       <section className="relative text-white py-16 md:py-24 overflow-hidden mt-30 h-130">
-        {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src="/Home/svg1.png"
-            alt="background"
-            className="h-130 w-full object-fill"
-          />
-          {/* Dark overlay for better text contrast */}
-          <div className="absolute inset-0"></div>
+          <img src="/Home/svg1.png" className="h-130 w-full object-fill" />
         </div>
 
-        {/* Stats Content - ADDED pt-8 to move text down */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
