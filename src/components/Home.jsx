@@ -54,7 +54,7 @@ export default function Home({ onGetStarted }) {
 
         <div className="grid grid-cols-7 gap-4">
           {/* CARD 1 */}
-          <Link href="/category/plumber">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/plumber.png"
@@ -68,7 +68,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 2 */}
-          <Link href="/category/electrician">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/electrician.png"
@@ -82,7 +82,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 3 */}
-          <Link href="/category/driver">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="Home/driver.png"
@@ -96,7 +96,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 4 */}
-          <Link href="/category/gardener">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/gardener.png"
@@ -110,7 +110,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 5 */}
-          <Link href="/category/carpenter">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/carpenter.png"
@@ -124,7 +124,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 6 */}
-          <Link href="/category/cook">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/cook.png"
@@ -138,7 +138,7 @@ export default function Home({ onGetStarted }) {
           </Link>
 
           {/* CARD 7 */}
-          <Link href="/category/more">
+          <Link href="#">
             <div className="relative w-full h-40 rounded-xl overflow-hidden cursor-pointer">
               <img
                 src="/Home/more.png"
@@ -161,7 +161,7 @@ export default function Home({ onGetStarted }) {
         <h2 className="text-red-600 text-4xl font-bold mb-15">Top Employees</h2>
 
         {/* Employee Card 1 */}
-        <Link href="/employee/john-doe">
+        <Link href="#">
           <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
             <div className="flex items-start gap-4">
               <img
@@ -185,7 +185,7 @@ export default function Home({ onGetStarted }) {
         </Link>
 
         {/* Employee Card 2 */}
-        <Link href="/employee/jane-smith">
+        <Link href="#">
           <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
             <div className="flex items-start gap-4">
               <img
@@ -209,7 +209,7 @@ export default function Home({ onGetStarted }) {
         </Link>
 
         {/* Employee Card 3 */}
-        <Link href="/employee/michael-lee">
+        <Link href="#">
           <div className="mx-auto mt-10 bg-white shadow-lg rounded-xl p-4 flex items-center justify-between cursor-pointer">
             <div className="flex items-start gap-4">
               <img
